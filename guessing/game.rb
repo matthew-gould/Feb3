@@ -13,6 +13,15 @@ class Game
   # def answer
   #   @answer
   # end
-
+  def check_guess n
+    @guesses_left -= 1
+    if n > @answer
+      "Your guess was too high."
+    elsif n < @answer
+      "Your guess was too low."
+    else
+      "You got it!"
+    end
+  end
 
 end
