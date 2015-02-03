@@ -21,6 +21,14 @@ class Dice
 end
 
 class LoadedDice < Dice
+  def roll
+    first_roll = super
+    if first_roll < (sides / 2)
+      super
+    else
+      first_roll
+    end
+  end
 end
 
 
